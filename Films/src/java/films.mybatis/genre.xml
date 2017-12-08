@@ -6,10 +6,10 @@
     <resultMap id = "result" type = "films.model.Genre"> 
        <result property = "id" column = "id"/> 
        <result property = "name" column = "name"/> 
-       <collection property="films" javaType="List" ofType="films.model.News" column="id"  select="selectNews" />
+       <collection property="films" javaType="List" ofType="films.model.Films" column="id"  select="selectFilms" />
     </resultMap> 
  
-    <select id="selectNews" parameterType="int" resultMap="films.result">  
+    <select id="selectFilms" parameterType="int" resultMap="films.result">  
           select * from films where id_genre = #{id}
     </select>
  
