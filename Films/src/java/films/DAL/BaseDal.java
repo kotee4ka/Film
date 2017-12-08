@@ -21,7 +21,7 @@ public class BaseDal
     {
       Reader reader = null;
         try { 
-            reader = Resources.getResourceAsReader("films/mybatis/config.xml");
+            reader = Resources.getResourceAsReader("Films/mybatis/config.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
         } 
         catch (IOException ex) {
