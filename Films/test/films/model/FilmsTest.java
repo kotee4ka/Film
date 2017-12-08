@@ -207,7 +207,7 @@ public class FilmsTest {
     public void testCreateFilms() {
         System.out.println("test Films CreateFilms");
        
-        Date date = new Date(2010, 10, 10);
+        Date date = new Date(2017, 12, 8);
         byte[] image = new byte[1024];
         Films films = new Films(1, "name", "description", image, date);
         assertEquals(films.getId(), 1);

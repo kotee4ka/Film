@@ -13,7 +13,10 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-
+/**
+ *
+ * @author Alex
+ */
 public class BaseDal 
 {
     protected SqlSessionFactory sqlSessionFactory;
@@ -21,10 +24,9 @@ public class BaseDal
     {
       Reader reader = null;
         try { 
-            reader = Resources.getResourceAsReader("Films/mybatis/config.xml");
+            reader = Resources.getResourceAsReader("films/mybatis/config.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
-        } 
-        catch (IOException ex) {
+        } catch (IOException ex) {
             Logger.getLogger(BaseDal.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {

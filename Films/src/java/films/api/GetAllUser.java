@@ -62,7 +62,7 @@ public class GetAllUser extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Description";
+        return "description";
     }// </editor-fold>
 
 }
