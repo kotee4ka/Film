@@ -24,9 +24,9 @@
        UPDATE films SET 
         name = #{name}, 
         description = #{description} ,
-        genre = #{genre} ,
-        date = #{date} ,
-        image= #{image} 
+        image= #{image},
+        date = #{date} , 
+        genre_id = #{genre_id}
         WHERE id = #{id}; 
     </update> 
   
@@ -35,7 +35,7 @@
     </delete> 
 
     <insert id = "insert" parameterType = "films.model.Films"> 
-       INSERT INTO films (name, description,genre, date,image)  
-       VALUES (#{name}, #{description},#{genre},#{date},#{image});     
+       INSERT INTO films (name, description, image, date, genre_id)  
+       VALUES (#{name}, #{description},#{genre},#{image}, #{date}, #{genre_id});     
     </insert>
 </mapper> 
