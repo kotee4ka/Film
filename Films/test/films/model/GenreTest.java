@@ -130,8 +130,8 @@ public class GenreTest {
        
         Date date = new Date(2010, 10, 10);
         byte[] image = new byte[1024];
-        Films films1 = new Films(1, "name", "description", "genre", date, image);
-        Films films2 = new Films(2, "name2", "description2", "genre2", date, image);
+        Films films1 = new Films(1, "name", "description", image, date);
+        Films films2 = new Films(2, "name2", "description2", image, date);
         List<Films> films = new ArrayList<>();
         films.add(films1);
         films.add(films2);
@@ -151,8 +151,8 @@ public class GenreTest {
         System.out.println("test Genre equals");
         Date date = new Date(2010, 10, 10);
         byte[] image = new byte[1024];
-        Films films1 = new Films(1, "name", "description", "genre", date, image);
-        Films films2 = new Films(2, "name2", "description2", "genre2", date, image);
+        Films films1 = new Films(1, "name", "description", image, date);
+        Films films2 = new Films(2, "name2", "description2", image, date);
         List<Films> films = new ArrayList<>();
         films.add(films1);
         films.add(films2);

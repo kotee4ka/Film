@@ -209,13 +209,12 @@ public class FilmsTest {
        
         Date date = new Date(2010, 10, 10);
         byte[] image = new byte[1024];
-        Films films = new Films(1, "name", "description", "genre", date, image);
+        Films films = new Films(1, "name", "description", image, date);
         assertEquals(films.getId(), 1);
         assertEquals(films.getName(), "name");
         assertEquals(films.getDescription(), "description");
-        assertEquals(films.getGenre(),  "genre");
-        assertEquals(films.getDate(), date);
         assertEquals(films.getImage(), image);
+        assertEquals(films.getDate(), date);
     }
 
     /**
@@ -226,9 +225,9 @@ public class FilmsTest {
         System.out.println("test Films equals");
         Date date = new Date(2010, 10, 10);
         byte[] image = new byte[1024];
-        Films films1 = new Films(1, "name", "description", "genre", date, image);
-        Films films2 = new Films(1, "name", "description", "genre", date, image);
-        Films films3 = new Films(2, "name1", "description1", "genre1", date, image);
+        Films films1 = new Films(1, "name", "description", image, date);
+        Films films2 = new Films(1, "name", "description", image, date);
+        Films films3 = new Films(2, "name1", "description1", image, date);
         assertTrue(films1.equals(films2));
         assertFalse(films1.equals(films3));
     }
