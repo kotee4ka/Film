@@ -1,46 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package films.DAL;
 
-import films.model.User;
 import java.util.List;
+import films.model.User;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Татаренко
- */
+
 public class UserDalTest {
     
     public UserDalTest() {
     }
-    
-    /*@BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }*/
 
     /**
      * Test of selectAll method, of class UserDal.
      */
     @Test
     public void testSelectAll() {
-        System.out.println("selectAll");
+        System.out.println("UserDal selectAll");
         UserDal instance = new UserDal();
         List<User> result = instance.selectAll();
         assertTrue(result!=null && result.size()>0);
@@ -63,7 +40,7 @@ public class UserDalTest {
      */
     @Test
     public void testUpdate() {
-        assertTrue(true);
+       assertTrue(false);
     }
 
     /**
@@ -71,15 +48,15 @@ public class UserDalTest {
      */
     @Test
     public void testInsert() {
-        assertTrue(true);
+       assertTrue(false);
     }
 
     /**
      * Test of delete method, of class UserDal.
      */
-    @Test
+  /*  @Test
     public void testDelete() {
-        assertTrue(true);
-    }
+      assertTrue(false);
+    }*/
     
 }
