@@ -10,10 +10,7 @@ import films.model.Films;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Alex
- */
+
 public class FilmsDalTest {
     
     public FilmsDalTest() {
