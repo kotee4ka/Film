@@ -7,9 +7,8 @@
        <result property = "id" column = "id"/> 
        <result property = "name" column = "name"/> 
        <result property = "description" column = "description"/> 
-       <result property = "genre" column = "genre"/> 
-       <result property = "date" column = "date"/> 
        <result property = "image" column = "image"/> 
+       <result property = "date" column = "date"/> 
     </resultMap> 
  
     <select id = "selectAll" resultMap = "result"> 
@@ -25,8 +24,7 @@
         name = #{name}, 
         description = #{description} ,
         image= #{image},
-        date = #{date} , 
-        genre_id = #{genre_id}
+        date = #{date}
         WHERE id = #{id}; 
     </update> 
   
@@ -35,7 +33,7 @@
     </delete> 
 
     <insert id = "insert" parameterType = "films.model.Films"> 
-       INSERT INTO films (name, description, image, date, genre_id)  
-       VALUES (#{name}, #{description},#{genre},#{image}, #{date}, #{genre_id});     
+       INSERT INTO films (name, description, image, date)  
+       VALUES (#{name}, #{description},#{genre},#{image}, #{date});     
     </insert>
 </mapper> 

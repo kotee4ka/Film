@@ -134,8 +134,8 @@ public class UserTest {
         user.setId(2);
         assertEquals(user.getId(), 2);
         
-        user.setLogin("Alex");
-        assertEquals(user.getLogin(), "Alex");
+        user.setLogin("Olga");
+        assertEquals(user.getLogin(), "Olga");
         
         user.setPassword("123");
         assertEquals(user.getPassword(), "123");
@@ -150,7 +150,7 @@ public class UserTest {
        
         User user1 = new User(1, "login", "password");        
         User user2 = new User(1, "login", "password");
-        User user3 = new User(2, "Alex", "123");
+        User user3 = new User(2, "Olga", "123");
         
         assertTrue( user1.equals(user2)   );
         assertFalse(user1.equals(user3)   );

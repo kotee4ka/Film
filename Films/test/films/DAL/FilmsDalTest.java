@@ -5,25 +5,24 @@
  */
 package films.DAL;
 
-import films.model.Films;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import films.model.Films;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
  *
- * @author Татаренко
+ * @author Alex
  */
 public class FilmsDalTest {
     
     public FilmsDalTest() {
     }
-    
-        @Test
+
+    /**
+     * Test of selectAll method, of class FilmsDal.
+     */
+    @Test
     public void testSelectAll() {
         System.out.println("selectAll");
         FilmsDal instance = new FilmsDal();
@@ -48,7 +47,7 @@ public class FilmsDalTest {
      */
     @Test
     public void testUpdate() {
-       assertTrue(true);
+       assertTrue(false);
     }
 
     /**
@@ -56,7 +55,7 @@ public class FilmsDalTest {
      */
     @Test
     public void testInsert() {
-         assertTrue(true);
+         assertTrue(false);
     }
 
     /**
@@ -64,7 +63,7 @@ public class FilmsDalTest {
      */
     @Test
     public void testDelete() {
-        assertTrue(true);
+        assertTrue(false);
     }
-       
+    
 }
