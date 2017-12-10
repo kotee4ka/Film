@@ -1,18 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package films.DAL;
 
 import java.util.List;
 import films.model.User;
 import org.apache.ibatis.session.SqlSession;
 
-/**
- *
- * @author Alex
- */
 public class UserDal extends BaseDal
 {
     public UserDal() {
@@ -39,7 +30,6 @@ public class UserDal extends BaseDal
     {
          SqlSession session = sqlSessionFactory.openSession(); 
          int count= session.update("user.update",user);
-         session.commit();
          session.close();
          return count;
     }
@@ -48,7 +38,6 @@ public class UserDal extends BaseDal
     {
          SqlSession session = sqlSessionFactory.openSession(); 
          int count= session.insert("user.insert",user);
-         session.commit();
          session.close();
          return count;
     }
@@ -57,7 +46,6 @@ public class UserDal extends BaseDal
     {
          SqlSession session = sqlSessionFactory.openSession(); 
          int count= session.delete("user.deleteById",id);
-         session.commit();
          session.close();
          return count;
     }

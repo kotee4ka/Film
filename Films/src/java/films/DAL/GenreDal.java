@@ -7,7 +7,6 @@ import org.apache.ibatis.session.SqlSession;
 
 public class GenreDal  extends BaseDal
 {
-
     public GenreDal() {
         super();
     }
@@ -23,7 +22,7 @@ public class GenreDal  extends BaseDal
     public Genre selectById(int id)
     {
          SqlSession session = sqlSessionFactory.openSession(); 
-         Genre genre= session.selectOne("genre.selectById",id);
+         Genre genre = session.selectOne("genre.selectById", id);
          session.close();
          return genre;
     }
@@ -31,8 +30,7 @@ public class GenreDal  extends BaseDal
     public int update(Genre genre)
     {
          SqlSession session = sqlSessionFactory.openSession(); 
-         int count= session.update("genre.update",genre);
-         session.commit();
+         int count = session.update("genre.update", genre);
          session.close();
          return count;
     }
@@ -40,8 +38,7 @@ public class GenreDal  extends BaseDal
     public int insert(Genre genre)
     {
          SqlSession session = sqlSessionFactory.openSession(); 
-         int count= session.insert("genre.insert",genre);
-         session.commit();
+         int count = session.insert("genre.insert", genre);
          session.close();
          return count;
     }
@@ -49,8 +46,7 @@ public class GenreDal  extends BaseDal
     public int delete(int id)
     {
          SqlSession session = sqlSessionFactory.openSession(); 
-         int count= session.delete("genre.deleteById",id);
-         session.commit();
+         int count = session.delete("genre.deleteById", id);
          session.close();
          return count;
     }
