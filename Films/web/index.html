@@ -1,16 +1,70 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
+        <title>Фильмы</title>
+        <meta charset="windows-1251">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+        <link href="lib/css/style.css" rel="stylesheet">
+         <script src="service/UserService.js"></script>
+        <script src="service/GenreService.js"></script>
+        <script src="service/FilmsService.js"></script>
+         <script src="controllers/UserController.js"></script>
+        <script src="controllers/GenreController.js"></script>
+        <script src="controllers/FilmsController.js"></script>
+        <script>
+            function genreClick(id)
+            {
+              var filmsController =  new FilmsController();
+              filmsController.getFilmsByGenreIdView(id);
+            }
+        </script>
     </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Фильмы</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Фильмы</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Главная</a></li>
+            <li><a href="#about">О проекте</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+          <div  class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+          <div id="genre" class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div> 
+          <div id="films" class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>  
+          <div  class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+      </div>
+    </div>
+
+    <!--  ================================================== -->
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script>
+         window.onload = function()
+         {
+              var controller = new GenreController();
+              controller.getAllGenreView(); 
+              var filmsController =  new FilmsController();
+              filmsController.getFilmsByGenreIdView(1);
+         }
+        
+    </script>
+    
+  </body>
 </html>

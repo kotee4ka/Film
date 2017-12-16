@@ -14,7 +14,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 /**
  *
- * @author Alex
+ * @author Котее4ка
  */
 public class JsonFilmsMapper {
      public static String toJSON(Films films)

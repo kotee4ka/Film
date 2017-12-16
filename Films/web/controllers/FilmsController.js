@@ -8,12 +8,12 @@ class FilmsController
     // DATAController
     getFilmsByGenreId(id)
     {
-        return this.filmsService.getFilmsByGenreId(id)
+        return this.filmsService.getFilmsByGenreId(id);
     }
     
     //ViewController
     getFilmsByGenreIdView(id)  {
-         var data=this.getFilmsByGenreId(id)
+         var data=this.getFilmsByGenreId(id);
         var result="";
         for(var i=0; i<data.length;i++)
         {

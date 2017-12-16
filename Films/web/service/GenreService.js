@@ -3,7 +3,7 @@ class GenreService
     getAllGenre()
     {
          var request = new XMLHttpRequest();
-         request.open('GET', '/FilmsPin1/GetAllGenre', false);
+         request.open('GET', '/FilmsProject/GetAllGenre', false);
          request.send();
          if (request.status != 200)  {
               alert( request.status + ': ' + request.statusText ); 
@@ -18,7 +18,7 @@ class GenreService
     getGenreById(id)
     {
          var request = new XMLHttpRequest();
-         request.open('GET', '/FilmsPin1/GetGenreById?id=' + id, false);
+         request.open('GET', '/FilmsProject/GetGenreById?id=' + id, false);
          request.send();
          if (request.status != 200)  {
               alert( request.status + ': ' + request.statusText ); 
