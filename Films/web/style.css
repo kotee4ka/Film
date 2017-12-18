@@ -1,4 +1,3 @@
-body{ }
 
 @font-face {
     font-family: RadikalW01_Black_bold;
@@ -59,6 +58,8 @@ src: url('../fonts/radikal_font_family/OPENSANS-SEMIBOLD.TTF');
 }
 
 .banner_home img {
+    margin-top: 11%;
+    margin-bottom: 2%;
     width: 100%;
 }
 
@@ -103,8 +104,7 @@ src: url('../fonts/radikal_font_family/OPENSANS-SEMIBOLD.TTF');
     color: #fff;
     font-size: 12px;
 }
-.classus p{color:#4c1f1e;padding-top: 10px;}
-.why_bookonline p{color:#4c1f1e;   font-family: RadikalW01-Medium; font-size:18px;}
+
 .medias ul li a:hover {    background: #000;}
 .jain_container .carousel-caption{    top: 38%;}
 
@@ -376,10 +376,8 @@ a.offers_link{
 .hotelslog .col-md-4{ padding:0px;}
 
 
-
-
-<!--@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);-->
 body {
+    background-color: beige;
   font-family: 'Open Sans', 'sans-serif';
 }
 .mega-dropdown {
