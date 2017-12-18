@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Alex
+ * @author Котее4ка
  */
 public class GenreDalTest {
     
