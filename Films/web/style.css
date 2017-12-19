@@ -79,7 +79,7 @@ src: url('../fonts/radikal_font_family/OPENSANS-SEMIBOLD.TTF');
 .form-horizontal_x .col-sm-2 {    padding: 3px;}
 .jain_container .navbar-default{position: absolute;    top: 20px;     background-color: rgba(255, 255, 255, 0.72);}
 
-.jain_container .nav>li>a{padding: 15px 10px;color:#4c1f1e;font-family: RadikalW01_Black_bold;}
+.jain_container .nav>li>a{padding: 25px 15px;color:#4c1f1e;font-family: RadikalW01_Black_bold;}
 
 .jain_container .btn-default {
     color: #fff;
@@ -90,7 +90,7 @@ src: url('../fonts/radikal_font_family/OPENSANS-SEMIBOLD.TTF');
     font-size: 16px;
 
 }
-.jain_container .navbar-nav{    margin-top: 12px;}
+.jain_container .navbar-nav{    margin-top: 36px;}
 .jain_container .btn-default:hover{ background:#000; border-color:#000;}
 .medias ul li a {
     height: 30px;
@@ -410,7 +410,7 @@ body {
 }
 .mega-dropdown-menu .dropdown-header {
   font-size: 18px;
-  color: #ff3546;
+  color: red;
   padding: 5px 60px 5px 5px;
   line-height: 30px;
 }
