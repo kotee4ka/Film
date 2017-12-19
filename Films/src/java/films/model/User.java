@@ -9,7 +9,7 @@ import java.util.Objects;
 
 /**
  *
- * @author РљРѕС‚РµРµС‡РєР°
+ * @author Котее4ка
  */
 public class User {
     private int id;

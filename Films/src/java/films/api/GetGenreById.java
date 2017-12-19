@@ -1,18 +1,26 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package films.api;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import films.controllers.GenreController;
+import films.mappers.JsonGenreMapper;
 import films.model.Genre;
 
-@WebServlet(name = "GetGenreById", urlPatterns = {"/GetGenreById"})
+/**
+ *
+ * @author Котее4ка
+ */
+@WebServlet(name = "getGenreById", urlPatterns = {"/GetGenreById"})
 public class GetGenreById extends HttpServlet {
 
     /**
@@ -31,9 +39,9 @@ public class GetGenreById extends HttpServlet {
         try (PrintWriter out = response.getWriter()) 
         {
              GenreController genreController = new GenreController();
-             Genre genre = genreController.getGenre(id);
-             // TODO add JSON Mapper
-             out.println(genre);
+             Genre genre= genreController.getGenre(id);
+             String json=JsonGenreMapper.toJSON(genre);
+             out.println(json);
         }
     }
 
@@ -73,7 +81,7 @@ public class GetGenreById extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Name";
+        return "Short description";
     }// </editor-fold>
 
 }

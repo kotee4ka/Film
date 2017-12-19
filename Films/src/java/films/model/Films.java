@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Класс модели Новость
  */
 package films.model;
 
@@ -11,7 +9,7 @@ import java.util.Objects;
 
 /**
  *
- * @author РљРѕС‚РµРµС‡РєР°
+ * @author Котее4ка
  */
 public class Films {
     
@@ -21,7 +19,8 @@ public class Films {
     private byte[] image;
     private Date date;
     
-    public Films(){
+
+    public Films() {
     }
 
     public Films(int id, String name, String description, byte[] image, Date date) {
@@ -36,50 +35,53 @@ public class Films {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+       public Date getDate() {
+        return date;
     }
 
     public byte[] getImage() {
         return image;
     }
+    
+     
 
-    public void setImage(byte[] image) {
-        this.image = image;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public Date getDate() {
-        return date;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setDate(Date date) {
         this.date = date;
     }
 
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
+    
+
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + this.id;
-        hash = 79 * hash + Objects.hashCode(this.name);
-        hash = 79 * hash + Objects.hashCode(this.description);
-        hash = 79 * hash + Arrays.hashCode(this.image);
-        hash = 79 * hash + Objects.hashCode(this.date);
+        int hash = 7;
+        hash = 23 * hash + this.id;
+        hash = 23 * hash + Objects.hashCode(this.name);
+        hash = 23 * hash + Objects.hashCode(this.description);
+        hash = 23 * hash + Arrays.hashCode(this.image);
+        hash = 23 * hash + Objects.hashCode(this.date);
         return hash;
     }
 
@@ -115,6 +117,6 @@ public class Films {
 
     @Override
     public String toString() {
-        return "Films{" + "id=" + id + ", name=" + name + ", description=" + description + ", image=" + image + ", date=" + date + '}';
+        return "Films{" + "id=" + id + ", name=" + name + ", description=" + description + ", date=" + date + '}';
     }
 }

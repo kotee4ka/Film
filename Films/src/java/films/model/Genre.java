@@ -11,7 +11,7 @@ import java.util.Objects;
 
 /**
  *
- * @author РљРѕС‚РµРµС‡РєР°
+ * @author Котее4ка
  */
 public class Genre {
     private int id;
@@ -94,6 +94,9 @@ public class Genre {
     @Override
     public String toString() {
         return "Genre{" + "id=" + id + ", name=" + name + ", films=" + films + '}';
-    }    
+    }
+    
+    
+    
+    
 }
-

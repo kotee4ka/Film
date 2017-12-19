@@ -1,8 +1,12 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package films.api;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,18 +16,32 @@ import films.controllers.UserController;
 import films.mappers.JsonUserMapper;
 import films.model.User;
 
-@WebServlet(name = "GetAllUser", urlPatterns = {"/GetAllUser"})
-public class GetAllUser extends HttpServlet {
+/**
+ *
+ * @author Котее4ка
+ */
+@WebServlet(name = "InsertUser", urlPatterns = {"/InsertUser"})
+public class InsertUser extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String json = request.getParameter("json");
         try (PrintWriter out = response.getWriter()) 
         {
+            User user = JsonUserMapper.fromJSON(json);
             UserController userController = new UserController();
-            List<User> list= userController.getAllUser();
-            String json=JsonUserMapper.toJSON(list);
-            out.println(json);
+            int count =userController.insertUser(user);
+            out.print(count);
         }
     }
 

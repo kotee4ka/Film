@@ -1,9 +1,18 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package films.controllers;
 
 import java.util.List;
 import films.DAL.GenreDal;
 import films.model.Genre;
 
+/**
+ *
+ * @author Котее4ка
+ */
 public class GenreController 
 {
     protected GenreDal genreDal;
