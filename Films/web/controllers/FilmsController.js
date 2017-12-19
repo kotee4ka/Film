@@ -18,7 +18,7 @@ class FilmsController
         for(var i=0; i<data.length;i++)
         {
             var id=data[i].id;
-            var name=data[i].title;
+            var name=data[i].name;
             var description=data[i].description;
             var date=data[i].date;
             var image=data[i].image;

@@ -3645,7 +3645,7 @@ input[type="button"].btn-block {
   }
 }
 
-.btn-group,
+/*.btn-group,
 .btn-group-vertical {
   position: relative;
   display: inline-block;
@@ -3902,7 +3902,7 @@ input[type="button"].btn-block {
 [data-toggle="buttons"] > .btn > input[type="radio"],
 [data-toggle="buttons"] > .btn > input[type="checkbox"] {
   display: none;
-}
+}*/
 
 .input-group {
   position: relative;
@@ -4141,7 +4141,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #00ffdf;
 }
 
 .nav-tabs > li {
