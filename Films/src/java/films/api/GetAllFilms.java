@@ -19,7 +19,7 @@ import films.model.Films;
 
 /**
  *
- * @author РљРѕС‚РµРµС‡РєР°
+ * @author Котее4ка
  */
 @WebServlet(name = "GetAllFilms", urlPatterns = {"/GetAllFilms"})
 public class GetAllFilms extends HttpServlet {

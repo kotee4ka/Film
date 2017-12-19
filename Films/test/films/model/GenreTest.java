@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author РўР°С‚Р°СЂРµРЅРєРѕ
+ * @author Котее4ка
  */
 public class GenreTest {
     
@@ -41,94 +41,13 @@ public class GenreTest {
     }
 
     /**
-     * Test of getId method, of class Genre.
-     */
-    /*@Test
-    public void testGetId() {
-        System.out.println("getId");
-        Genre instance = new Genre();
-        int expResult = 0;
-        int result = instance.getId();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getName method, of class Genre.
-     */
-    /*@Test
-    public void testGetName() {
-        System.out.println("getName");
-        Genre instance = new Genre();
-        String expResult = "";
-        String result = instance.getName();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getFilms method, of class Genre.
-     */
-    /*@Test
-    public void testGetFilms() {
-        System.out.println("getFilms");
-        Genre instance = new Genre();
-        List<Films> expResult = null;
-        List<Films> result = instance.getFilms();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setId method, of class Genre.
-     */
-    /*@Test
-    public void testSetId() {
-        System.out.println("setId");
-        int id = 0;
-        Genre instance = new Genre();
-        instance.setId(id);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setName method, of class Genre.
-     */
-    /*@Test
-    public void testSetName() {
-        System.out.println("setName");
-        String name = "";
-        Genre instance = new Genre();
-        instance.setName(name);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setFilms method, of class Genre.
-     */
-    /*@Test
-    public void testSetFilms() {
-        System.out.println("setFilms");
-        List<Films> Films = null;
-        Genre instance = new Genre();
-        instance.setFilms(Films);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of hashCode method, of class Genre.
+     * Тест создания категории
      */
     @Test
     public void testCreateGenre() {
         System.out.println("test Genre CreateGenre");
-       
-        Date date = new Date(2010, 10, 10);
+        
+        Date date = new Date(2017, 9, 26);
         byte[] image = new byte[1024];
         Films films1 = new Films(1, "name", "description", image, date);
         Films films2 = new Films(2, "name2", "description2", image, date);
@@ -139,17 +58,18 @@ public class GenreTest {
         Genre genre = new Genre(1, "name", films);
         
         assertEquals(genre.getId(), 1);
-        assertEquals(genre.getFilms(), "name");
+        assertEquals(genre.getName(), "name");
         assertEquals(genre.getFilms(), films);
     }
 
     /**
-     * Test of equals method, of class Genre.
+     *Тест проверки равенсва Категорий
      */
     @Test
     public void testEquals() {
-        System.out.println("test Genre equals");
-        Date date = new Date(2010, 10, 10);
+        System.out.println("test Genre equels");
+        
+        Date date = new Date(2017, 9, 26);
         byte[] image = new byte[1024];
         Films films1 = new Films(1, "name", "description", image, date);
         Films films2 = new Films(2, "name2", "description2", image, date);
@@ -165,16 +85,6 @@ public class GenreTest {
         assertFalse(genre1.equals(genre3));
     }
 
-    /**
-     * Test of toString method, of class Genre.
-     */
-    /*@Test
-    public void testToString() {
-        System.out.println("toString");
-        Genre instance = new Genre();
-        String expResult = "";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");*/
-    }
+   
+    
+}

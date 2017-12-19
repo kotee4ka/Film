@@ -9,7 +9,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 /**
  *
- * @author РљРѕС‚РµРµС‡РєР°
+ * @author Котее4ка
  */
 public class JsonUserMapper {
      public static String toJSON(User user)

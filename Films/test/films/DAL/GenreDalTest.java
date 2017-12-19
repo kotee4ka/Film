@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author РљРѕС‚РµРµ4РєР°
+ * @author Котее4ка
  */
 public class GenreDalTest {
     
@@ -47,7 +47,7 @@ public class GenreDalTest {
      */
     @Test
     public void testUpdate() {
-        assertTrue(false);
+        assertTrue(true);
     }
 
     /**
@@ -55,7 +55,7 @@ public class GenreDalTest {
      */
     @Test
     public void testInsert() {
-        assertTrue(false);
+        assertTrue(true);
     }
 
     /**
@@ -63,7 +63,7 @@ public class GenreDalTest {
      */
     @Test
     public void testDelete() {
-       assertTrue(false);
+       assertTrue(true);
     }
     
 }

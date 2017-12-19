@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package films.api;
 
 import java.io.IOException;
@@ -9,20 +14,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import films.controllers.GenreController;
+import films.mappers.JsonGenreMapper;
 import films.model.Genre;
 
+/**
+ *
+ * @author Котее4ка
+ */
 @WebServlet(name = "GetAllGenre", urlPatterns = {"/GetAllGenre"})
 public class GetAllGenre extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) 
         {
             GenreController genreController = new GenreController();
-            List<Genre> list = genreController.getAllGenre();
-            // TODO add JSON Mapper
-            out.println(list);
+            List<Genre> list= genreController.getAllGenre();
+            String json=JsonGenreMapper.toJSON(list);
+            out.println(json);
         }
     }
 
@@ -62,6 +81,7 @@ public class GetAllGenre extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Name";
+        return "description";
     }// </editor-fold>
+
 }

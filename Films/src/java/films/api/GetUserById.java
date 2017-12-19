@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package films.api;
 
 import java.io.IOException;
@@ -9,8 +14,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import films.controllers.UserController;
+import films.mappers.JsonUserMapper;
 import films.model.User;
 
+/**
+ *
+ * @author Котее4ка
+ */
 @WebServlet(name = "GetUserById", urlPatterns = {"/GetUserById"})
 public class GetUserById extends HttpServlet {
 
@@ -30,9 +40,9 @@ public class GetUserById extends HttpServlet {
         try (PrintWriter out = response.getWriter()) 
         {
              UserController userController = new UserController();
-             User user = userController.getUser(id);
-             // TODO add JSON Mapper
-             out.println(user);
+             User user= userController.getUser(id);
+             String json=JsonUserMapper.toJSON(user);
+             out.println(json);
         }
     }
 
@@ -72,7 +82,7 @@ public class GetUserById extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Description";
+        return "Short description";
     }// </editor-fold>
 
 }

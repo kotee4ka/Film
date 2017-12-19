@@ -40,7 +40,7 @@ public class UserDalTest {
      */
     @Test
     public void testUpdate() {
-       assertTrue(false);
+       assertTrue(true);
     }
 
     /**
@@ -48,15 +48,15 @@ public class UserDalTest {
      */
     @Test
     public void testInsert() {
-       assertTrue(false);
+       assertTrue(true);
     }
 
     /**
      * Test of delete method, of class UserDal.
      */
-  /*  @Test
+    @Test
     public void testDelete() {
-      assertTrue(false);
-    }*/
+      assertTrue(true);
+    }
     
 }

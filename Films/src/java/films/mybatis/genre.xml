@@ -10,7 +10,7 @@
     </resultMap> 
  
     <select id="selectFilms" parameterType="int" resultMap="films.result">  
-          select * from films where id_genre = #{id}
+          select * from films where genre_id = #{id}
     </select>
  
  

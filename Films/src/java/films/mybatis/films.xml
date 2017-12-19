@@ -6,7 +6,7 @@
     <resultMap id = "result" type = "films.model.Films"> 
        <result property = "id" column = "id"/> 
        <result property = "name" column = "name"/> 
-       <result property = "description" column = "description"/> 
+       <result property = "description" column = "description"/>        
        <result property = "image" column = "image"/> 
        <result property = "date" column = "date"/> 
     </resultMap> 
@@ -22,9 +22,9 @@
     <update id = "update" parameterType = "films.model.Films"> 
        UPDATE films SET 
         name = #{name}, 
-        description = #{description} ,
+        description = #{description},
         image= #{image},
-        date = #{date}
+        date = #{date}  
         WHERE id = #{id}; 
     </update> 
   
@@ -33,7 +33,7 @@
     </delete> 
 
     <insert id = "insert" parameterType = "films.model.Films"> 
-       INSERT INTO films (name, description, image, date)  
-       VALUES (#{name}, #{description},#{genre},#{image}, #{date});     
+       INSERT INTO films (name, description,image,date)  
+       VALUES (#{name}, #{description},#{image},#{date});     
     </insert>
 </mapper> 
