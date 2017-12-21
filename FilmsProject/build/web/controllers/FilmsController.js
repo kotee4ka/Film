@@ -44,15 +44,16 @@ class FilmsController
                               "<p>" + date + "</p>"+
                               "<p>" + description + "</p>"+
                               "<div class='meta'>"+
-                                "<div class='icon-comment'>22 Comments</div>"+
+                                /*"<div class='icon-comment'>22 Comments</div>"*/+
                                 "<ul class='tags'>"+
                                   "<li></li>"+
                                   "<li></li>"+
                                 "</ul>"+
                               "</div>"+
-                            "</div>"+
+                            "</div>"+                     
                         "</div>";
-        }
+                
+                        }
 
         var element =document.getElementById("films");
         element.innerHTML = result;
