@@ -20,20 +20,38 @@ class FilmsController
             var id=data[i].id;
             var name=data[i].name;
             var description=data[i].description;
-            var date=data[i].date;
+            
+            var date = new Date(data[i].date);           
+            var options = {
+                     year: 'numeric',
+                     month: 'long',
+                     day: 'numeric'
+                   };
+             date = date.toLocaleString("ru", options);
+            
             var image=data[i].image;
-            result +=  "<div class='row'>"+
-                        "<div class='col-sm-12 col-md-12'>"+
-                          "<div class='thumbnail'>"+
-                            "<img src='data:image/png;base64,"+ image +"'/>"+
-                            "<div class='caption'>"+
-                              "<h3>"+name+"</h3>"+
-                              "<p>"+description+"</p>"+
-                              "<p align='right'>"+date+"</p>"+
+            result +=  "<div class='blog-posts'>"+
+                        "<div class='post featured'>"+
+                          "<a href='#'>"+
+                            "<div class='image' style='background-image: url(data:image/png;base64," + image + ")';>"+
+                              "<div class='time'>"+
+                                "<div class='date'>04</div>"+
+                                "<div class='month'>APR</div>"+
+                              "</div>"+
                             "</div>"+
-                          "</div>"+
-                        "</div>"+
-                      "</div>";
+                            "<div class='content'>"+
+                              "<h1>" + name + "</h1>"+
+                              "<p>" + date + "</p>"+
+                              "<p>" + description + "</p>"+
+                              "<div class='meta'>"+
+                                "<div class='icon-comment'>22 Comments</div>"+
+                                "<ul class='tags'>"+
+                                  "<li></li>"+
+                                  "<li></li>"+
+                                "</ul>"+
+                              "</div>"+
+                            "</div>"+
+                        "</div>";
         }
 
         var element =document.getElementById("films");
