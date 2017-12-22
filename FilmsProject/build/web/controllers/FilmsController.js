@@ -13,7 +13,7 @@ class FilmsController
     
     //ViewController
     getFilmsByGenreIdView(id)  {
-         var data=this.getFilmsByGenreId(id);
+        var data=this.getFilmsByGenreId(id);
         var result="";
         for(var i=0; i<data.length;i++)
         {
@@ -30,7 +30,7 @@ class FilmsController
              date = date.toLocaleString("ru", options);
             
             var image=data[i].image;
-            result +=  "<div class='blog-posts'>"+
+            result +=  "<div class='blog-posts' style='height: 800px;'>"+
                         "<div class='post featured'>"+
                           "<a href='#'>"+
                             "<div class='image' style='background-image: url(data:image/png;base64," + image + ")';>"+
@@ -51,9 +51,8 @@ class FilmsController
                                 "</ul>"+
                               "</div>"+
                             "</div>"+                     
-                        "</div>";
-                
-                        }
+                        "</div>";                
+        }
 
         var element =document.getElementById("films");
         element.innerHTML = result;
