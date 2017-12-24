@@ -30,22 +30,18 @@ class FilmsController
              date = date.toLocaleString("ru", options);
             
             var image=data[i].image;
-            result +=  "<div class='blog-posts' style='height: 800px;'>"+
+            result +=  "<div class='blog-posts'>"+
                         "<div class='post featured'>"+
                           "<a href='#'>"+
                             "<div class='image' style='background-image: url(data:image/png;base64," + image + ")';>"+
-                              "<div class='time'>"+
-                                "<div class='date'>04</div>"+
-                                "<div class='month'>APR</div>"+
-                              "</div>"+
+                              
                             "</div>"+
                             "<div class='content'>"+
                               "<h1>" + name + "</h1>"+
                               "<p>" + date + "</p>"+
                               "<p>" + description + "</p>"+
                               "<div class='meta'>"+
-                                /*"<div class='icon-comment'>22 Comments</div>"*/+
-                                "<ul class='tags'>"+
+                                 "<ul class='tags'>"+
                                   "<li></li>"+
                                   "<li></li>"+
                                 "</ul>"+

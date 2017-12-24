@@ -380,14 +380,19 @@ a.offers_link{
 /*body {
     background-color: beige;
   font-family: 'Open Sans', 'sans-serif';
-}
+}*/
+
 .mega-dropdown {
   position: static !important;
 }
 .mega-dropdown-menu {
-    padding: 20px 0px;
-    width: 100%;
+    padding: 0px 0 0 0;
+    width: 31%;
+    font-family: calibri;
+    font-size: 1em;
+    font-weight: 800;
     box-shadow: none;
+    
     -webkit-box-shadow: none;
 }
 .mega-dropdown-menu > li > ul {
@@ -399,7 +404,7 @@ a.offers_link{
 }
 .mega-dropdown-menu > li > ul > li > a {
     display: block;
-	padding: 10px 5px;
+    padding: 10px 5px;
     border-bottom: 1px solid #ca7167;
     color: #4c1f1e;
     font-family: RadikalW01_Black_bold;
@@ -414,7 +419,7 @@ a.offers_link{
   color: red;
   padding: 5px 60px 5px 5px;
   line-height: 30px;
-}*/
+}
 
 @import url(https://fonts.googleapis.com/css?family=Fresca);
 html, body, div, span, applet, object, iframe,
